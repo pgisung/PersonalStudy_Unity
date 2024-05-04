@@ -1,0 +1,15 @@
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\bin\Debug\net8.0\SimpleConsoleGame.exe
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\bin\Debug\net8.0\SimpleConsoleGame.deps.json
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\bin\Debug\net8.0\SimpleConsoleGame.runtimeconfig.json
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\bin\Debug\net8.0\SimpleConsoleGame.dll
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\bin\Debug\net8.0\SimpleConsoleGame.pdb
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\SimpleConsoleGame.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\SimpleConsoleGame.AssemblyInfoInputs.cache
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\SimpleConsoleGame.AssemblyInfo.cs
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\SimpleConsoleGame.csproj.CoreCompileInputs.cache
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\SimpleConsoleGame.sourcelink.json
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\SimpleConsoleGame.dll
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\refint\SimpleConsoleGame.dll
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\SimpleConsoleGame.pdb
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\SimpleConsoleGame.genruntimeconfig.cache
+D:\Workspace\PersonalStudy_Unity\SimpleConsoleGame\SimpleConsoleGame\obj\Debug\net8.0\ref\SimpleConsoleGame.dll
