@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Managers  : MonoBehaviour
 {
-    static Managers s_Instance;
-    static Managers Instance { get { init();  return s_Instance; } }
+    // ΩÃ±€≈Ê ∆–≈œ
+    static Managers s_instance;
+    static Managers Instance { get { init();  return s_instance; } }
 
-    InputManager _Input = new InputManager();
-    public static InputManager Input { get { return Instance._Input; } }
+    InputManager _input = new InputManager();
+    ResourceManager _resource = new ResourceManager();
+    UIManager _ui = new UIManager();
 
-    ResourceManager _Resource = new ResourceManager();
-    public static ResourceManager Resource { get { return Instance._Resource; } }
+    public static InputManager Input { get { return Instance._input; } }
+    public static ResourceManager Resource { get { return Instance._resource; } }
+    public static UIManager UI { get { return Instance._ui; } }
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +25,12 @@ public class Managers  : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _Input.OnUpdate();
+        _input.OnUpdate();
     }
 
     static void init()
     {
-        if (s_Instance == null)
+        if (s_instance == null)
         {
             GameObject go = GameObject.Find("@Managers");
             if (go == null)
@@ -37,7 +40,7 @@ public class Managers  : MonoBehaviour
             }
 
             DontDestroyOnLoad(go);
-            s_Instance = go.GetComponent<Managers>();
+            s_instance = go.GetComponent<Managers>();
         }
     }
 }
