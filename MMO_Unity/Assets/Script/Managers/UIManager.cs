@@ -56,12 +56,12 @@ public class UIManager
         if (string.IsNullOrEmpty(name))
             name = typeof(T).Name;
 
-        GameObject go = Managers.Resource.Instantiate($"UI/Scene/{name}}");
+        GameObject go = Managers.Resource.Instantiate($"UI/SubItem/{name}");
 
         if (parent != null)
             go.transform.SetParent(parent.transform);
 
-        return Util.GetOrAddComponent<T>(go)i;
+        return Util.GetOrAddComponent<T>(go);
     }
 
     public T ShowSceneUI<T>(string name = null) where T : UI_Scene
