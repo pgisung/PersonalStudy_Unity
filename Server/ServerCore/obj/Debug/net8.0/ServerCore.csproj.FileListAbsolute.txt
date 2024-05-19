@@ -1,6 +1,4 @@
-D:\Workspace\PersonalStudy_Unity\Server\ServerCore\bin\Debug\net8.0\ServerCore.exe
 D:\Workspace\PersonalStudy_Unity\Server\ServerCore\bin\Debug\net8.0\ServerCore.deps.json
-D:\Workspace\PersonalStudy_Unity\Server\ServerCore\bin\Debug\net8.0\ServerCore.runtimeconfig.json
 D:\Workspace\PersonalStudy_Unity\Server\ServerCore\bin\Debug\net8.0\ServerCore.dll
 D:\Workspace\PersonalStudy_Unity\Server\ServerCore\bin\Debug\net8.0\ServerCore.pdb
 D:\Workspace\PersonalStudy_Unity\Server\ServerCore\obj\Debug\net8.0\ServerCore.GeneratedMSBuildEditorConfig.editorconfig
@@ -11,5 +9,4 @@ D:\Workspace\PersonalStudy_Unity\Server\ServerCore\obj\Debug\net8.0\ServerCore.s
 D:\Workspace\PersonalStudy_Unity\Server\ServerCore\obj\Debug\net8.0\ServerCore.dll
 D:\Workspace\PersonalStudy_Unity\Server\ServerCore\obj\Debug\net8.0\refint\ServerCore.dll
 D:\Workspace\PersonalStudy_Unity\Server\ServerCore\obj\Debug\net8.0\ServerCore.pdb
-D:\Workspace\PersonalStudy_Unity\Server\ServerCore\obj\Debug\net8.0\ServerCore.genruntimeconfig.cache
 D:\Workspace\PersonalStudy_Unity\Server\ServerCore\obj\Debug\net8.0\ref\ServerCore.dll
