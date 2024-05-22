@@ -29,6 +29,11 @@ internal class PacketManager
     }}
     #endregion
 
+    PacketManager()
+    {{
+        Register();
+    }}
+
     Dictionary<ushort, Action<PacketSession, ArraySegment<byte>>> _onRecv = new Dictionary<ushort, Action<PacketSession, ArraySegment<byte>>>();
     Dictionary<ushort, Action<PacketSession, IPacket>> _handler = new Dictionary<ushort, Action<PacketSession, IPacket>>();
 

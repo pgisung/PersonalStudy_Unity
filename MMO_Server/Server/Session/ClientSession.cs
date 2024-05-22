@@ -1,20 +1,37 @@
-﻿using ServerCore;
-using System;
+﻿using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using ServerCore;
 
-namespace DummyClient
+namespace Server
 {
-    class ServerSession : PacketSession
+    class ClientSession : PacketSession
     {
+        public int SessionId { get; set; }
+        public GameRoom Room { get; set; }
+
         public override void OnConnected(EndPoint endPoint)
         {
             Console.WriteLine($"OnConnected: {endPoint}");
+
+            Program.Room.Push(
+                () => Program.Room.Enter(this)
+                );
         }
 
         public override void OnDisconnected(EndPoint endPoint)
         {
+            SessionManager.Instance.Remove(this);
+            if (Room != null)
+            {
+                GameRoom room = Room;
+                room.Push(
+                    () => room.Leave(this)
+                    );
+                Room = null;
+            }
+
             Console.WriteLine($"OnDisconnected: {endPoint}");
         }
 
