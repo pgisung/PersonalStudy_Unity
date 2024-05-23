@@ -8,7 +8,7 @@ namespace Server
 {
     interface ITask
     {
-        void Execute();
+        void Execute(ArraySegment<byte> segment);
     }
 
     class BroadcastTask : ITask
@@ -24,9 +24,9 @@ namespace Server
             _chat = chat;
         }
 
-        public void Execute()
+        public void Execute(ArraySegment<byte> segment)
         {
-            _room.Broadcast(_session, _chat);
+            _room.Broadcast(segment);
         }
     }
 
