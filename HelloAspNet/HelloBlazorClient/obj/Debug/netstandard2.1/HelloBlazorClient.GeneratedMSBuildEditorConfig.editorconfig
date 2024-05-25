@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = HelloBlazorClient
+build_property.ProjectDir = D:\Workspace\PersonalStudy_Unity\HelloAspNet\HelloBlazorClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
