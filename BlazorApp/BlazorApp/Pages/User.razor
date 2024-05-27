@@ -4,19 +4,21 @@
 
 <h3>Online Users</h3>
 
-<p>
-    Users: <b>@_users.Count()</b>
-</p>
-
-<ul class="list-group">
-    @foreach(UserData user in _users)
+<label>Theme Color</label>
+<select class="form-control" @bind="_selectedColor">
+    @foreach (var option in _options)
     {
-        <li @key="user" class="list-group-item">
-            <label>@user.Name</label>
-            <button type="button" class="btn btn-link" @onclick="(() => KickUser(user))">[Kick]</button>
-        </li>
+        <option value="@option">
+            @option
+        </option>
     }
-</ul>
+</select>
+
+<!-- Cascading Parameter - Parameter인데 영역안의 모든 자식들에 데이터를 넘김 + 단순히 영역안의 자식들뿐 아니라 그 자식의 자식까지... 즉 깊이까지도 적용할 수 있다-->
+<CascadingValue Name="ThemeColor" Value="_selectedColor">
+    <!-- Parameter와 ref를 이용하여 부모와 자식간 데이터, 함수 주고받기 + EventCallback = Action과 같이 델리게이트처럼 동작하나 StateHasChanged 함수를 따로 호출하지 않아도 뷰를 갱신해줌-->
+    <ShowUser Users="_users" CallbackTest="CallbackTestFunc" @ref="_showUser"></ShowUser>
+</CascadingValue>
 
 <br />
 
@@ -28,32 +30,26 @@
         <div class="col">
             <!-- 속성(attribute)에도 binding을 할 수가 있다 -->
             <!-- conditional attribute 속성 자체에 조건을 붙일 수도 있다 -->
-            <button class="@_btnClass" type="button" @onclick="AddUser" disabled="@_users.Count() >= 5">Add a User</button>
+            <button class="btn btn-primary" type="button" @onclick="AddUser" disabled="@(_users.Count() >= 5)">Add a User</button>
         </div>
     </div>
 </div>
 
 @code {
+    string _selectedColor = "Green";
+    List<string> _options = new List<string>() { "Green", "Red", "Blue" };
+
     List<UserData> _users = new List<UserData>();
+    ShowUser _showUser;
 
     string _inputName = "";
-    string _btnClass = "btn btn-primary";
-
-    protected override void OnInitialized()
-    {
-        _users.Add(new UserData(){ Name = "Johnny" });
-        _users.Add(new UserData(){ Name = "Cindy" });
-        _users.Add(new UserData(){ Name = "Songee" });
-        RefreshButton();
-    }
 
     void AddUser()
     {
         if (_inputName == "") return;
 
-        _users.Add(new UserData() { Name = _inputName });
+        _showUser.AddUser(new UserData() { Name = _inputName });
         _inputName = "";
-        RefreshButton();
     }
 
     void KickUser(UserData user)
@@ -61,14 +57,11 @@
         if (_users.Count() < 1) return;
 
         _users.Remove(user);
-        RefreshButton();
     }
 
-    void RefreshButton()
+    void CallbackTestFunc()
     {
-        if (_users.Count() % 2 == 0)
-            _btnClass = "btn btn-primary";
-        else
-            _btnClass = "btn btn-secondary";
+        _inputName = "CallbackTest";
+        // StateHasChanged();
     }
 }

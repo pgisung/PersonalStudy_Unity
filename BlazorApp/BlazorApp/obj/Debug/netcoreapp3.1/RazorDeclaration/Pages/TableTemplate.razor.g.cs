@@ -67,25 +67,22 @@ using BlazorApp.Shared
 #nullable disable
     ;
 #nullable restore
-#line 3 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\User.razor"
- using BlazorApp.Data
+#line 1 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\TableTemplate.razor"
+ using BlazorApp.Data;
 
 #line default
 #line hidden
 #nullable disable
-    ;
-    [global::Microsoft.AspNetCore.Components.RouteAttribute(
-    // language=Route,Component
-#nullable restore
-#line 1 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\User.razor"
-      "/user"
-
-#line default
-#line hidden
-#nullable disable
-    )]
     #nullable restore
-    public partial class User : global::Microsoft.AspNetCore.Components.ComponentBase
+    public partial class TableTemplate<
+#nullable restore
+#line 3 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\TableTemplate.razor"
+           TItem
+
+#line default
+#line hidden
+#nullable disable
+    > : global::Microsoft.AspNetCore.Components.ComponentBase
     #nullable disable
     {
         #pragma warning disable 1998
@@ -94,36 +91,16 @@ using BlazorApp.Shared
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\User.razor"
+#line 23 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\TableTemplate.razor"
        
-    string _selectedColor = "Green";
-    List<string> _options = new List<string>() { "Green", "Red", "Blue" };
+    [Parameter]
+    public RenderFragment Header { get; set; }
 
-    List<UserData> _users = new List<UserData>();
-    ShowUser _showUser;
+    [Parameter]
+    public RenderFragment<TItem> Row { get; set; }
 
-    string _inputName = "";
-
-    void AddUser()
-    {
-        if (_inputName == "") return;
-
-        _showUser.AddUser(new UserData() { Name = _inputName });
-        _inputName = "";
-    }
-
-    void KickUser(UserData user)
-    {
-        if (_users.Count() < 1) return;
-
-        _users.Remove(user);
-    }
-
-    void CallbackTestFunc()
-    {
-        _inputName = "CallbackTest";
-        // StateHasChanged();
-    }
+    [Parameter]
+    public IReadOnlyList<TItem> Items { get; set; }
 
 #line default
 #line hidden

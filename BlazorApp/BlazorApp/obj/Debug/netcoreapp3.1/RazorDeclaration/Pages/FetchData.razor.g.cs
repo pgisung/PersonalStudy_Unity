@@ -94,7 +94,7 @@ using BlazorApp.Shared
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\FetchData.razor"
+#line 35 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\FetchData.razor"
        
     private WeatherForecast[] forecasts;
 

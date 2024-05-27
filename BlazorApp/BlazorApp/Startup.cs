@@ -29,6 +29,19 @@ namespace BlazorApp
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+
+            // Dependency injection
+            services.AddSingleton<IFoodService, FastFoodService>();
+            // 생성자에서 알아서 연결해준다 - 이미 주입된 의존성을 생성자에서 받을 경우
+            services.AddSingleton<PaymentService>();
+
+            // 3가지 모드
+            // Singleton - 처음에 한번만 생성되고 No 변화 : 모두에게 변화없이 똑같이 보여줘야 할 때
+            // Transient - 무조건 모든 요청 마다 변화한다
+            // Scoped - 위 둘의 중간 정도인데 처음 생성될 때 마다 변화
+            services.AddSingleton<SingletonService>();
+            services.AddTransient<TransientService>();
+            services.AddScoped<ScopedService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

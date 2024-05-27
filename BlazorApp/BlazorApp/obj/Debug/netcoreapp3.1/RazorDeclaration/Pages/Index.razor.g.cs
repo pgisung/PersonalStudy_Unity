@@ -64,6 +64,12 @@ using BlazorApp
 #line 9 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\_Imports.razor"
 using BlazorApp.Shared
 
+#nullable disable
+    ;
+#nullable restore
+#line 3 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+ using BlazorApp.Data
+
 #line default
 #line hidden
 #nullable disable
@@ -87,6 +93,108 @@ using BlazorApp.Shared
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 28 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+      
+    protected override void OnInitialized()
+    {
+        
+    }
+
+#line default
+#line hidden
+#nullable disable
+
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
+#nullable restore
+#line 9 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+        ScopedService
+
+#line default
+#line hidden
+#nullable disable
+         
+#nullable restore
+#line 9 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+                      scoped
+
+#line default
+#line hidden
+#nullable disable
+         { get; set; }
+         = default!;
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
+#nullable restore
+#line 8 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+        TransientService
+
+#line default
+#line hidden
+#nullable disable
+         
+#nullable restore
+#line 8 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+                         transient
+
+#line default
+#line hidden
+#nullable disable
+         { get; set; }
+         = default!;
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
+#nullable restore
+#line 7 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+        SingletonService
+
+#line default
+#line hidden
+#nullable disable
+         
+#nullable restore
+#line 7 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+                         singleton
+
+#line default
+#line hidden
+#nullable disable
+         { get; set; }
+         = default!;
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
+#nullable restore
+#line 5 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+        PaymentService
+
+#line default
+#line hidden
+#nullable disable
+         
+#nullable restore
+#line 5 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+                       paymentService
+
+#line default
+#line hidden
+#nullable disable
+         { get; set; }
+         = default!;
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
+#nullable restore
+#line 4 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+        IFoodService
+
+#line default
+#line hidden
+#nullable disable
+         
+#nullable restore
+#line 4 "D:\Workspace\PersonalStudy_Unity\BlazorApp\BlazorApp\Pages\Index.razor"
+                     foodService
+
+#line default
+#line hidden
+#nullable disable
+         { get; set; }
+         = default!;
     }
 }
 #pragma warning restore 1591
