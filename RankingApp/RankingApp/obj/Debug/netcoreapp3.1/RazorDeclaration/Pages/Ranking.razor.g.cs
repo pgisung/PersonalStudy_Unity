@@ -64,6 +64,18 @@ using RankingApp
 #line 9 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\_Imports.razor"
 using RankingApp.Shared
 
+#nullable disable
+    ;
+#nullable restore
+#line 2 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Ranking.razor"
+ using RankingApp.Data.Models
+
+#nullable disable
+    ;
+#nullable restore
+#line 3 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Ranking.razor"
+ using RankingApp.Data.Services
+
 #line default
 #line hidden
 #nullable disable
@@ -71,15 +83,15 @@ using RankingApp.Shared
     [global::Microsoft.AspNetCore.Components.RouteAttribute(
     // language=Route,Component
 #nullable restore
-#line 1 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Counter.razor"
-      "/counter"
+#line 1 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Ranking.razor"
+      "/ranking"
 
 #line default
 #line hidden
 #nullable disable
     )]
     #nullable restore
-    public partial class Counter : global::Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Ranking : global::Microsoft.AspNetCore.Components.ComponentBase
     #nullable disable
     {
         #pragma warning disable 1998
@@ -88,19 +100,37 @@ using RankingApp.Shared
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Counter.razor"
+#line 36 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Ranking.razor"
        
-    private int currentCount = 0;
+    List<GameResult> _gameResults;
 
-    private void IncrementCount()
+    protected override async Task OnInitializedAsync()
     {
-        currentCount++;
+        _gameResults = await RankingService.GetGameResultAsync();
     }
 
 #line default
 #line hidden
 #nullable disable
 
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
+#nullable restore
+#line 5 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Ranking.razor"
+        RankingService
+
+#line default
+#line hidden
+#nullable disable
+         
+#nullable restore
+#line 5 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Ranking.razor"
+                       RankingService
+
+#line default
+#line hidden
+#nullable disable
+         { get; set; }
+         = default!;
     }
 }
 #pragma warning restore 1591

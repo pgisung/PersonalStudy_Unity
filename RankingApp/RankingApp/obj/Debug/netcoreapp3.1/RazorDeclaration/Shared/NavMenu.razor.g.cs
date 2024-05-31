@@ -78,7 +78,7 @@ using RankingApp.Shared
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Shared\NavMenu.razor"
+#line 23 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
