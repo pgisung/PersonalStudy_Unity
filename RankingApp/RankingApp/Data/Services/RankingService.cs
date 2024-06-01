@@ -15,6 +15,17 @@ namespace RankingApp.Data.Services
             _context = context;
         }
 
+        // Create
+        public Task<GameResult> AddGameResult(GameResult gameResult)
+        {
+            _context.GameResults.Add(gameResult);
+            // 메모리에 갱신 - ORM의 장점 : DB에 따로 접근하지 않아도 함수 하나로 자동으로 가능
+            _context.SaveChanges();
+
+            return Task.FromResult(gameResult);
+        }
+
+        // Read
         public Task<List<GameResult>> GetGameResultAsync()
         {
             List<GameResult> results = _context.GameResults
@@ -23,5 +34,9 @@ namespace RankingApp.Data.Services
 
             return Task.FromResult(results);
         }
+
+        // Update
+
+        // Delete
     }
 }
