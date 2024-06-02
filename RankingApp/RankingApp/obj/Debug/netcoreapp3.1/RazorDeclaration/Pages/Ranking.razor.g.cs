@@ -100,7 +100,7 @@ using RankingApp.Shared
         }
         #pragma warning restore 1998
 #nullable restore
-#line 74 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Ranking.razor"
+#line 82 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Ranking.razor"
        
     List<GameResult> _gameResults;
 
@@ -123,6 +123,18 @@ using RankingApp.Shared
         _showPopup = false;
     }
 
+    void UpdateGameResult(GameResult gameResult)
+    {
+        _showPopup = true;
+        _gameResult = gameResult;
+    }
+
+    async Task DeleteGameResult(GameResult gameResult)
+    {
+        var result = RankingService.DeleteGameResult(gameResult);
+        _gameResults = await RankingService.GetGameResultAsync();
+    }
+
     async Task SaveGameResult()
     {
         if (_gameResult.Id == 0)
@@ -132,9 +144,10 @@ using RankingApp.Shared
         }
         else
         {
-            // TODO
+            var result = RankingService.UpdateGameResult(_gameResult);
         }
 
+        _showPopup = false;
         // 최적화 할 수도 있겠지만 운영툴은 성능과 결과 반환속도가 엄청 중요하지도 않은데다가
         // 오히려 일일히 변경된 값만 가져오다가 관리가 힘들 수 있으므로 모든 데이터 갱신
         _gameResults = await RankingService.GetGameResultAsync();

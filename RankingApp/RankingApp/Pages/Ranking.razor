@@ -20,6 +20,8 @@
                         <th>UserName</th>
                         <th>Score</th>
                         <th>Date</th>
+                        <th>Date</th>
+                        <th>Date</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,6 +31,12 @@
                             <td>@gameResult.UserName</td>
                             <td>@gameResult.Score</td>
                             <td>@gameResult.Date.ToString()</td>
+                            <td>
+                                <button class="btn btn-primary" @onclick="() => UpdateGameResult(gameResult)">Edit</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" @onclick="() => DeleteGameResult(gameResult)">Delete</button>
+                            </td>
                         </tr>
                     }
                 </tbody>
@@ -93,6 +101,18 @@
         _showPopup = false;
     }
 
+    void UpdateGameResult(GameResult gameResult)
+    {
+        _showPopup = true;
+        _gameResult = gameResult;
+    }
+
+    async Task DeleteGameResult(GameResult gameResult)
+    {
+        var result = RankingService.DeleteGameResult(gameResult);
+        _gameResults = await RankingService.GetGameResultAsync();
+    }
+
     async Task SaveGameResult()
     {
         if (_gameResult.Id == 0)
@@ -102,9 +122,10 @@
         }
         else
         {
-            // TODO
+            var result = RankingService.UpdateGameResult(_gameResult);
         }
 
+        _showPopup = false;
         // 최적화 할 수도 있겠지만 운영툴은 성능과 결과 반환속도가 엄청 중요하지도 않은데다가
         // 오히려 일일히 변경된 값만 가져오다가 관리가 힘들 수 있으므로 모든 데이터 갱신
         _gameResults = await RankingService.GetGameResultAsync();
