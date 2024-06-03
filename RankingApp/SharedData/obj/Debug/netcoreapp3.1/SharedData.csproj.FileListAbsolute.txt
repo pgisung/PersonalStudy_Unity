@@ -1,0 +1,10 @@
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\bin\Debug\netcoreapp3.1\SharedData.deps.json
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\bin\Debug\netcoreapp3.1\SharedData.dll
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\bin\Debug\netcoreapp3.1\SharedData.pdb
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\obj\Debug\netcoreapp3.1\SharedData.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\obj\Debug\netcoreapp3.1\SharedData.AssemblyInfoInputs.cache
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\obj\Debug\netcoreapp3.1\SharedData.AssemblyInfo.cs
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\obj\Debug\netcoreapp3.1\SharedData.csproj.CoreCompileInputs.cache
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\obj\Debug\netcoreapp3.1\SharedData.sourcelink.json
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\obj\Debug\netcoreapp3.1\SharedData.dll
+D:\Workspace\PersonalStudy_Unity\RankingApp\SharedData\obj\Debug\netcoreapp3.1\SharedData.pdb
