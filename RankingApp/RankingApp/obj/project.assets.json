@@ -1775,6 +1775,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "SharedData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/SharedData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SharedData.dll": {}
+        }
       }
     }
   },
@@ -5940,6 +5950,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "SharedData/1.0.0": {
+      "type": "project",
+      "path": "../SharedData/SharedData.csproj",
+      "msbuildProject": "../SharedData/SharedData.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5948,7 +5963,8 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.32",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.32",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.32",
-      "Microsoft.EntityFrameworkCore.Tools >= 3.1.32"
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.32",
+      "SharedData >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5978,7 +5994,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Workspace\\PersonalStudy_Unity\\RankingApp\\SharedData\\SharedData.csproj": {
+              "projectPath": "D:\\Workspace\\PersonalStudy_Unity\\RankingApp\\SharedData\\SharedData.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

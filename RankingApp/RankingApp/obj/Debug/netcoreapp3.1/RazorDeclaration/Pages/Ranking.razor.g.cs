@@ -68,7 +68,7 @@ using RankingApp.Shared
     ;
 #nullable restore
 #line 2 "D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\Pages\Ranking.razor"
- using RankingApp.Data.Models
+ using SharedData.Models
 
 #nullable disable
     ;
@@ -140,11 +140,11 @@ using RankingApp.Shared
         if (_gameResult.Id == 0)
         {
             _gameResult.Date = DateTime.Now;
-            var result = RankingService.AddGameResult(_gameResult);
+            var result = await RankingService.AddGameResult(_gameResult);
         }
         else
         {
-            var result = RankingService.UpdateGameResult(_gameResult);
+            var result = await RankingService.UpdateGameResult(_gameResult);
         }
 
         _showPopup = false;

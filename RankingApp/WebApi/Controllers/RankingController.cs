@@ -58,6 +58,7 @@ namespace WebApi.Controllers
         public GameResult AddGameResult([FromBody] GameResult gameResult)
         {
             _context.GameResults.Add(gameResult);
+            // 메모리에 갱신 - ORM의 장점 : DB에 따로 접근하지 않아도 함수 하나로 자동으로 가능
             _context.SaveChanges();
 
             return gameResult;

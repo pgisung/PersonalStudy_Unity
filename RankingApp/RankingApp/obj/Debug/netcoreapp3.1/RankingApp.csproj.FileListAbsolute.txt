@@ -60,6 +60,8 @@ D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\bin\Debug\netcoreapp3.1\r
 D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\bin\Debug\netcoreapp3.1\SharedData.dll
+D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\bin\Debug\netcoreapp3.1\SharedData.pdb
 D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\obj\Debug\netcoreapp3.1\RankingApp.csproj.AssemblyReference.cache
 D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\obj\Debug\netcoreapp3.1\RankingApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\Workspace\PersonalStudy_Unity\RankingApp\RankingApp\obj\Debug\netcoreapp3.1\RankingApp.AssemblyInfoInputs.cache
